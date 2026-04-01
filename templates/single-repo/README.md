@@ -12,6 +12,8 @@ This is the source template. Derive integration-workspace behavior from it only 
 - `verification-first.md` records the local validation ladder.
 - `command-inventory.md` lists the repeatable commands that may later become skills.
 - `skill-inventory.md` maps shared foundation skills and future repo-local skills.
+- repo-local skills under `.codex/skills/` should declare a `validation_level` and a minimal validation section.
+- every repo-local skill requires `static` validation; use `smoke` validation only for runtime-sensitive or stateful skill paths.
 - `verification-first.md` should be instantiated from the cataloged command examples.
 
 ## Standard Workflow

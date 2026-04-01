@@ -19,6 +19,7 @@ Instructions in this workspace apply to the CodexEnv template repository.
 - Read the research notes in `research/verification-first-patterns.md` before making assumptions about workflow shape.
 - Read `research/runtime-bootstrap.md` before standardizing environment or auth behavior.
 - Read `research/skill-model.md` before adding or changing skills.
+- Read `research/skill-validation.md` before adding or changing repo-local skill validation.
 - Read `research/template-versioning.md` before changing the versioning model.
 - If you are extending a template, update the matching template `AGENTS.md` first, then the supporting docs.
 

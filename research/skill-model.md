@@ -19,6 +19,10 @@ Use them for:
 
 These are derived from a repo or workspace `command-inventory.md`.
 
+Recommended location:
+
+- `<repo>/.codex/skills/`
+
 Use them for:
 
 - repo-specific startup commands
@@ -37,12 +41,40 @@ Every skill should declare:
 - `introduced_in`
 - `changed_in`
 - `depends_on`
+- `validation_level`
 
 ## Ownership Rules
 
 - Shared skills own cross-repo conventions.
 - Repo-local skills own only repo-specific execution details.
 - Shared skills may call into repo-local command inventories conceptually, but should not duplicate those commands.
+- Repo-local skills should version with the repo they automate, not with `CodexEnv`.
+
+## Validation Model
+
+Use a two-tier validation model for repo-local skills.
+
+### Static
+
+Required for every repo-local skill.
+
+Confirm that:
+
+- the skill is listed in `skill-inventory.md`
+- the command or workflow matches `command-inventory.md`
+- dependencies match `runtime-bootstrap.md` and shared skill assumptions
+- the output contract is documented
+
+### Smoke
+
+Required only for repo-local skills that:
+
+- start services
+- run Docker
+- open service or database shells
+- depend on process readiness or container state
+
+Smoke checks should stay minimal and validate the skill dispatch path rather than the whole repo.
 
 ## First Shared Skill Set
 

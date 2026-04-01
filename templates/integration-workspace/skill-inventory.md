@@ -8,10 +8,10 @@
 
 ## Workspace Skills
 
-- contract inspection:
-- shared service orchestration:
-- workspace publish coordination:
+- contract inspection: `.codex/skills/<workspace-contract-inspection>/` (`static`)
+- shared service orchestration: `.codex/skills/<workspace-service-orchestration>/` (`smoke`)
+- workspace publish coordination: `.codex/skills/<workspace-publish-coordination>/` (`static`)
 
 ## Child Repo Skills
 
-Derive child repo skills from each child repo `command-inventory.md`.
+Derive child repo skills from each child repo `command-inventory.md` and classify each one as `static` or `smoke`.
