@@ -1,0 +1,12 @@
+{
+  "template_type": "single-repo",
+  "template_version": "1.1.0",
+  "template_source": "CodexEnv/templates/single-repo",
+  "runtime_contract_version": "1.0.0",
+  "shared_skill_set_version": "1.0.0",
+  "applied_at": "YYYY-MM-DD",
+  "last_reviewed_at": "YYYY-MM-DD",
+  "drift_status": "clean",
+  "local_overrides": [],
+  "notes": "Replace placeholders with repo-specific values when codexifying a repo."
+}
