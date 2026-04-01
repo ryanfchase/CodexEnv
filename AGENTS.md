@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Instructions in this workspace apply to the CodexEnv template repo at `/home/codex/workspace/CODEX`.
+Instructions in this workspace apply to the CodexEnv template repository.
 
 ## Workspace
 
