@@ -41,8 +41,8 @@ Use separate semantic version lines for the two template types:
 
 Current starting versions:
 
-- `single-repo@1.3.0`
-- `integration-workspace@1.3.0`
+- `single-repo@1.4.0`
+- `integration-workspace@1.4.0`
 
 ## Codexification Stages
 

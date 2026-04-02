@@ -7,6 +7,8 @@ This is the source template. Derive integration-workspace behavior from it only 
 ## Template Shape
 
 - `AGENTS.md` sets the operating rules.
+- `README.md` should include a `Codex Status` section that summarizes current stage, readiness, remaining work, and available toolkit entries.
+- `readme-codex-status.md` provides the standard shape for that README dashboard section.
 - `codex-template.json` identifies the template line, version, codexification stage, conformity state, and drift state.
 - `codex-assessment.md` records the current readiness scorecard, evidence, and next promotion target.
 - `runtime-bootstrap.md` records the repo's runtime, auth, and escalation conventions.

@@ -65,6 +65,7 @@ The manifest should also record `template_access_reference` so an agent knows wh
    - drift status
    - template access mode
 3. Check for the expected Codex artifacts for that template line:
+   - `README.md`
    - `AGENTS.md`
    - `codex-template.json`
    - `codex-assessment.md`
