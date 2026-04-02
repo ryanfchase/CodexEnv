@@ -29,6 +29,7 @@ Recommended checks:
 - `command_inventory_grounded`
 - `verification_path_defined`
 - `verification_path_validated`
+- `github_actions_verification`
 - `shared_skill_coverage`
 - `repo_local_skill_coverage`
 - `publish_flow_current`
@@ -64,11 +65,14 @@ The environment may be promoted to `operational` when:
 - `command_inventory_grounded`: `pass`
 - `verification_path_defined`: `pass`
 - `verification_path_validated`: `pass`
+- `github_actions_verification`: `pass` when the repo uses GitHub and exposes a native verification command that should be enforced on change
 - `shared_skill_coverage`: `pass`
 - `publish_flow_current`: `pass`
 - `operational_smoke`: `pass` or a repo-specific equivalent is explicitly recorded
 
 `repo_local_skill_coverage` does not have to be `pass` for every repo type. It may be `deferred` when the current template line explicitly allows a repo to stay operational with shared skills plus documented commands.
+
+`github_actions_verification` may be `deferred` only when the repo is not expected to use GitHub Actions or when there is a documented alternative CI system that enforces the same verification path.
 
 ## Evidence Recording
 
