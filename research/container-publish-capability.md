@@ -8,6 +8,7 @@ This file defines how CodexEnv should model container-image build and publish wo
 - Avoid forcing containerization onto repos that do not build or ship images.
 - Make image build or publish checks visible to both humans and agents.
 - Keep the first standard aligned to GitHub Actions rather than heavy local automation.
+- Stop codexification at publishable artifacts rather than assuming every repo must also own deployment.
 
 ## Scope
 
@@ -72,3 +73,5 @@ Do not require a local `docker login`, `docker build`, `docker tag`, or `docker 
 Container publishing should be modeled as a repo capability, not as a universal property of backend work.
 
 If a repo only uses compose for local verification, keep that under normal verification and do not imply it also publishes images.
+
+If a repo publishes an image, that proves artifact readiness. It does not by itself require the repo or CodexEnv to define the last-mile deployment mechanism.

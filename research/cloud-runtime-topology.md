@@ -8,6 +8,7 @@ This file defines the default cloud-runtime and container-registry model for cod
 - Avoid forcing Docker publication onto repos that do not need a container runtime.
 - Give integration environments one clear default for AWS-hosted container workloads.
 - Keep registry and runtime decisions explicit in the manifest and assessment.
+- Make the stop point between "publishable artifact" and "last-mile deployment" explicit.
 
 ## Default Platform Model
 
@@ -35,10 +36,13 @@ Use a hybrid platform model for integration environments that span multiple repo
   - cloud runtime topology
   - registry strategy
   - secret and config injection contracts
+  - artifact-consumption contracts for publishable services
 - Parent integration workspaces own:
   - repo routing
   - cross-repo assessment
   - visibility into which repo owns each contract
+
+Integration environment repos may also own full deployment implementation, but that should be treated as an explicit environment phase rather than a CodexEnv baseline requirement.
 
 ## Registry Standard
 
@@ -114,9 +118,21 @@ Local compose is for reproducible developer orchestration, not for modeling prod
   - cloud deployment
 - Never check in real secrets.
 - For AWS-hosted cloud runtimes, prefer:
-  - SSM Parameter Store
-  - Secrets Manager
+  - SSM Parameter Store for non-secret config
+  - Secrets Manager for secrets
   - IAM roles or OIDC for cloud auth
+
+## Phase Boundary
+
+Phase 1 environment ownership should be enough to answer:
+
+- which artifact is produced
+- which registry repository owns it
+- which runtime class is expected to consume it
+- which config values come from SSM
+- which secrets come from Secrets Manager
+
+Phase 2 may add concrete deployment implementation such as ECS services, task definitions, ALBs, or IaC stacks, but that is optional and environment-specific.
 
 ## Practical Rule
 

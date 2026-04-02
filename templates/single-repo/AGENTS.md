@@ -20,6 +20,7 @@ Instructions in this template apply to a single git repository.
   - create a new branch named `codex/<short-slug>`
   - do not make feature or bugfix commits on `main`
 - If a change affects another repo or a cross-repo contract, stop and confirm ownership before editing beyond this repo.
+- Treat the default stopping point as "verified and publishable." Do not assume this repo must also own last-mile deployment unless it explicitly says so.
 
 ## Verification
 
@@ -38,6 +39,7 @@ Instructions in this template apply to a single git repository.
 - Update `codex-assessment.md` whenever the readiness scorecard, latest evidence, or next promotion target changes.
 - If the repo publishes container images, document that as an explicit optional capability rather than assuming it is part of the base codexification contract.
 - When a repo opts into container publishing, keep the build or push path aligned with the repo's documented verification path and the owning GitHub Actions workflow.
+- Container publication proves artifact readiness. It does not by itself require the repo to define environment-specific deployment machinery.
 
 ## Publish
 

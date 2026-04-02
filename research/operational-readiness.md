@@ -7,6 +7,7 @@ This file defines how to tell whether a codexified repo or workspace is merely d
 - Make it easy for humans and agents to answer "how codexified is this?"
 - Promote environments to `operational` only when there is real evidence, not just completed paperwork.
 - Keep the feedback signal compact enough to live in the manifest, with optional narrative detail in `codex-assessment.md`.
+- Keep codexification bounded so `operational` means "usable and publishable" rather than "fully deployed."
 
 ## Readiness States
 
@@ -82,6 +83,12 @@ The environment may be promoted to `operational` when:
 `integration_orchestration_defined`, `integration_orchestration_validated`, `cloud_runtime_defined`, and `registry_strategy_defined` are most useful for integration-workspace templates or versioned environment repos. They may be omitted or `deferred` in ordinary single-repo app repos.
 `container_publish_verification` is optional. It should be present only when a repo explicitly declares a container-image build or publish capability.
 
+Operational promotion should stop at the repo or workspace boundary:
+
+- app repos should prove that the runtime contract is explicit and the artifact is verifiable and publishable
+- environment repos should prove that local orchestration and artifact-consumption contracts are explicit
+- full deployment implementation is optional and should be tracked as an environment-specific extension rather than a base codexification requirement
+
 When present, use:
 
 - `missing`: the repo claims container publishing support but does not yet document a usable path
@@ -117,6 +124,8 @@ Use the repo `README.md` for the thin human-facing dashboard:
 ## Practical Rule
 
 If an agent or human cannot tell whether the repo's documented verification path actually ran recently, the environment is not operational yet.
+
+If an agent or human cannot tell whether the repo's documented artifact can be consumed by its owning environment, the repo may be standardized but is not fully operational for publishable workflows.
 
 If an agent or human cannot scan the `README.md` and quickly understand the current stage, remaining work, and available toolkit, the environment is missing an important feedback surface.
 

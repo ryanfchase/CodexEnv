@@ -21,6 +21,7 @@ This directory is a staging area for reusable agent-assisted project templates a
 - `research/codexification-assessment.md` defines lifecycle stages, conformity review, and template access modes.
 - `research/operational-readiness.md` defines the scorecard and evidence needed to promote a codexified environment from standardized to operational.
 - `research/container-publish-capability.md` defines the optional container-image build and publish capability for repos that actually ship images.
+- `research/cloud-runtime-topology.md` defines the ownership split between app repos, environment repos, and any later deployment implementation.
 - `skills/shared/` contains the first shared skill set for codexified environments.
 - `templates/single-repo/` standardizes the workflow for one repo owned end-to-end.
 - `templates/integration-workspace/` standardizes the workflow for a parent workspace that coordinates sibling repos.
@@ -28,6 +29,8 @@ This directory is a staging area for reusable agent-assisted project templates a
 ## Intended Use
 
 Use these files as the starting point for future project work, then add repo-specific commands, ownership notes, validation gates, codexification assessment data, and operational-readiness evidence as each new workspace is introduced.
+
+The default stopping point is "verifiable and publishable," not "fully deployed." Environment-specific deployment remains optional unless the owning integration repo explicitly takes it on.
 
 `CodexEnv` is intended to be the canonical upstream git repository for this template system.
 

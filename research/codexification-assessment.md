@@ -98,6 +98,13 @@ Treat `standardized` as a documentation and alignment milestone.
 
 Treat `operational` as an evidence milestone. The environment should not be promoted until there is a recorded readiness scorecard and at least one successful validation pass for the intended normal workflow.
 
+`Operational` should not be conflated with "fully deployed." For publishable services, the intended stopping point is usually:
+
+- runtime contract is explicit
+- verification passes
+- artifact build or publish path is owned and documented
+- consuming environment contract is clear
+
 Optional capabilities such as container-image publishing should be assessed separately from base codexification. A repo may be fully codexified without any container capability if its real workflow does not build or ship images.
 
 ## Practical Rule
