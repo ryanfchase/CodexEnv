@@ -1,6 +1,6 @@
 ---
 name: git-repo-publish
-description: Publish validated repo changes using the documented Codex git workflow. Use when a codexified repo needs to stage, commit, push, and open a draft PR consistently.
+description: Publish validated repo changes using the documented Codex git workflow. Use when a codexified repo needs to stage, commit, push, and open a PR consistently.
 ---
 
 # Git Repo Publish
@@ -11,7 +11,7 @@ Skill metadata:
 - `scope`: `shared`
 - `template_types`: `single-repo`
 - `introduced_in`: `1.1.0`
-- `changed_in`: `1.1.0`
+- `changed_in`: `1.1.2`
 - `depends_on`: `env-github-auth`, `git-branch-pr-status`
 
 ## Workflow
@@ -21,7 +21,8 @@ Skill metadata:
 3. Stage intended files only.
 4. Create a logical commit.
 5. Push the branch.
-6. Open a draft PR with `gh` unless the repo explicitly documents a different publish flow.
+6. Open a ready-for-review PR with `gh` by default.
+7. Open a draft PR only when the user explicitly requests one or the repo explicitly documents a draft-first publish flow.
 
 ## Output
 

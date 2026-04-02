@@ -37,4 +37,5 @@ Instructions in this template apply to a single git repository.
 
 ## Publish
 
-- When the requested work is complete and validation passes, stage the intended files, commit them, push the branch to `origin`, and open a pull request against `main`.
+- When the requested work is complete and validation passes, stage the intended files, commit them, push the branch to `origin`, and open a ready-for-review pull request against `main` with `gh` unless the repo documents a different publish flow.
+- Open draft pull requests only when explicitly requested.

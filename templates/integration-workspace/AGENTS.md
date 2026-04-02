@@ -35,4 +35,5 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 
 ## Publish
 
-- After validation passes in every touched repo, stage the intended changes, commit them, push the branch or branches to `origin`, and open the relevant pull request or pull requests against `main`.
+- After validation passes in every touched repo, stage the intended changes, commit them, push the branch or branches to `origin`, and open the relevant ready-for-review pull request or pull requests against `main` with `gh` unless a repo documents a different publish flow.
+- Open draft pull requests only when explicitly requested.
