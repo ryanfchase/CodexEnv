@@ -41,8 +41,8 @@ Use separate semantic version lines for the two template types:
 
 Current starting versions:
 
-- `single-repo@1.2.0`
-- `integration-workspace@1.2.0`
+- `single-repo@1.3.0`
+- `integration-workspace@1.3.0`
 
 ## Codexification Stages
 
@@ -102,6 +102,9 @@ Recommended fields:
 - `template_access_reference`
 - `runtime_contract_version`
 - `shared_skill_set_version`
+- `next_stage_target`
+- `operational_readiness`
+- `assessment_checks`
 - `applied_at`
 - `last_reviewed_at`
 - `last_conformity_reviewed_at`
@@ -114,5 +117,6 @@ Recommended fields:
 - `CodexEnv` is the maintainer workspace for template evolution.
 - `CodexEnv` should be maintained as the canonical upstream git repository for template releases and tags.
 - Each codexified repo or workspace keeps its own local manifest with stage, conformity, and source-access data.
+- The manifest should also provide a compact readiness summary so humans and agents can see how codexified the environment actually is without opening multiple docs.
 - Prefer a local CodexEnv checkout when one is available; otherwise use the GitHub repo as the fallback template source.
 - Session summaries are the human-readable change log, not the machine-readable version identifier.

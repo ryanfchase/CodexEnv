@@ -21,6 +21,7 @@ Instructions in this workspace apply to the CodexEnv template repository.
 - Read `research/skill-model.md` before adding or changing skills.
 - Read `research/skill-validation.md` before adding or changing repo-local skill validation.
 - Read `research/codexification-assessment.md` before changing how projects are assessed or upgraded.
+- Read `research/operational-readiness.md` before changing stage-promotion rules or toolkit feedback signals.
 - Read `research/template-versioning.md` before changing the versioning model.
 - If you are extending a template, update the matching template `AGENTS.md` first, then the supporting docs.
 

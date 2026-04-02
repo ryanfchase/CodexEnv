@@ -16,6 +16,7 @@ Assess every codexified environment on three separate axes:
 - `codexification_stage`
 - `conformity_status`
 - `drift_status`
+- `operational_readiness`
 
 Use `codexification_stage` to answer how far the environment has progressed.
 
@@ -36,6 +37,13 @@ Use `drift_status` to answer whether the environment is current or intentionally
 - `clean`
 - `overrides`
 - `stale`
+
+Use `operational_readiness` to answer whether the documented agent toolkit is actually ready for normal use.
+
+- `missing`
+- `partial`
+- `passing`
+- `blocked`
 
 ## Access Modes
 
@@ -59,6 +67,7 @@ The manifest should also record `template_access_reference` so an agent knows wh
 3. Check for the expected Codex artifacts for that template line:
    - `AGENTS.md`
    - `codex-template.json`
+   - `codex-assessment.md`
    - `runtime-bootstrap.md`
    - `verification-first.md`
    - `command-inventory.md`
@@ -68,6 +77,7 @@ The manifest should also record `template_access_reference` so an agent knows wh
    - what is missing
    - what is stale
    - what is intentionally overridden
+   - what evidence supports the current stage
 6. Update the manifest after review.
 
 ## Stage Guidance
@@ -77,6 +87,12 @@ The manifest should also record `template_access_reference` so an agent knows wh
 - `standardized`: the docs and manifest match the current template line and are grounded in real repo commands.
 - `operational`: the repo or workspace is standardized and has the intended skill coverage in place.
 - `maintained`: the environment is operational and kept current with template upgrades.
+
+## Evidence Rule
+
+Treat `standardized` as a documentation and alignment milestone.
+
+Treat `operational` as an evidence milestone. The environment should not be promoted until there is a recorded readiness scorecard and at least one successful validation pass for the intended normal workflow.
 
 ## Practical Rule
 
