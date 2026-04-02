@@ -30,6 +30,10 @@ Recommended checks:
 - `verification_path_defined`
 - `verification_path_validated`
 - `github_actions_verification`
+- `integration_orchestration_defined`
+- `integration_orchestration_validated`
+- `cloud_runtime_defined`
+- `registry_strategy_defined`
 - `shared_skill_coverage`
 - `repo_local_skill_coverage`
 - `publish_flow_current`
@@ -73,6 +77,8 @@ The environment may be promoted to `operational` when:
 `repo_local_skill_coverage` does not have to be `pass` for every repo type. It may be `deferred` when the current template line explicitly allows a repo to stay operational with shared skills plus documented commands.
 
 `github_actions_verification` may be `deferred` only when the repo is not expected to use GitHub Actions or when there is a documented alternative CI system that enforces the same verification path.
+
+`integration_orchestration_defined`, `integration_orchestration_validated`, `cloud_runtime_defined`, and `registry_strategy_defined` are most useful for integration-workspace templates or versioned environment repos. They may be omitted or `deferred` in ordinary single-repo app repos.
 
 ## Evidence Recording
 

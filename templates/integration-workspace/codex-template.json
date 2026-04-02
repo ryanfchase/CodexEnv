@@ -1,6 +1,6 @@
 {
   "template_type": "integration-workspace",
-  "template_version": "1.5.0",
+  "template_version": "1.7.0",
   "codexification_stage": "standardized",
   "conformity_status": "conforming",
   "template_source": "CodexEnv/templates/integration-workspace",
@@ -8,6 +8,8 @@
   "template_access_reference": "/path/to/CodexEnv",
   "runtime_contract_version": "1.0.0",
   "shared_skill_set_version": "1.0.0",
+  "cloud_runtime_target": "aws-ecs-fargate for long-running services; static-hosting for frontend apps",
+  "registry_strategy": "aws-ecr for deployable container workloads",
   "next_stage_target": "operational",
   "operational_readiness": "partial",
   "assessment_checks": {
@@ -18,6 +20,10 @@
     "verification_path_defined": "pass",
     "verification_path_validated": "partial",
     "github_actions_verification": "partial",
+    "integration_orchestration_defined": "pass",
+    "integration_orchestration_validated": "partial",
+    "cloud_runtime_defined": "pass",
+    "registry_strategy_defined": "pass",
     "shared_skill_coverage": "pass",
     "repo_local_skill_coverage": "deferred",
     "publish_flow_current": "pass",

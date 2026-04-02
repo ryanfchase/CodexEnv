@@ -5,6 +5,7 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 ## Workspace
 
 - Start from the single-repo template rules, then add only the sibling-repo coordination that the task requires.
+- Keep checked-in multi-repo local orchestration and cloud runtime ownership explicit. Do not leave shared environment wiring as untracked parent-workspace knowledge.
 - Add a root-level `codex-template.json` so the workspace advertises its template version, codexification stage, conformity status, and drift status.
 - Add a root-level `codex-assessment.md` so the workspace records the evidence behind its current stage and readiness.
 - Add a workspace-level `runtime-bootstrap.md` so shared skills can discover runtime and auth assumptions consistently.
@@ -23,12 +24,18 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 - If a repo's PR is merged, switch to `main`, pull the latest `origin/main`, and create a fresh `codex/<short-slug>` branch before making changes.
 - Fetch `origin/main` before creating a new working branch in any touched repo.
 - If the same change needs coordination across repos, keep the contract boundary explicit and validate each repo independently.
+- Default AWS-managed long-running services to `aws-ecs-fargate` with `aws-ecr` as the deploy registry unless a repo documents a different runtime class.
+- Do not force static frontends into container publication when static hosting is the cleaner real runtime.
 
 ## Verification
 
 - Use each child repo's own validation commands.
 - Verify the changed repo first, then the dependent repo or contract partner.
 - Keep a command inventory for each child repo so the workflow remains repeatable.
+- When the workspace owns a versioned environment repo, document:
+  - the local orchestration entrypoints
+  - the cloud runtime target by service class
+  - the registry strategy for deployable container workloads
 - Seed those inventories from `research/command-catalog.md`, then specialize them for each child repo and the workspace-level checks.
 - Keep `skill-inventory.md` aligned with the shared foundation skills plus any workspace or child-repo skills derived from stable command inventory entries.
 - Validate every workspace-local or child-repo-local skill statically, and add smoke validation only when the skill starts services, runs Docker, opens shells, or depends on process readiness.
