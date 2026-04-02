@@ -9,12 +9,29 @@ Skill metadata:
 
 - `skill_id`: `git-repo-publish`
 - `scope`: `shared`
-- `template_types`: `single-repo`
+- `template_types`: `single-repo`, `integration-workspace`
 - `introduced_in`: `1.1.0`
-- `changed_in`: `1.6.1`
+- `changed_in`: `1.8.0`
 - `depends_on`: `env-github-auth`, `git-branch-pr-status`
+- `validation_level`: `contract+probe`
+- `support_status`: `supported`
 
-## Workflow
+## Purpose
+
+Publish already-validated changes using the documented Codex git workflow and safe `gh` PR creation defaults.
+
+## Inputs
+
+- validated git working tree
+- repo `AGENTS.md`
+- PR title and body material
+
+## Preconditions
+
+- relevant validation already passed
+- the branch is the correct working branch for publication
+
+## Steps
 
 1. Confirm validation already passed.
 2. Confirm branch state is correct for publishing.
@@ -33,10 +50,22 @@ Skill metadata:
 - If the PR body needs command examples, keep them in the body file rather than interpolating them into the shell command itself.
 - If a PR body is malformed after creation, correct it with `gh pr edit --body-file <path>`.
 
-## Output
+## Outputs
 
 Return:
 
 - branch published or blocked
 - commit and push status
 - PR status or next required action
+
+## Failure Modes
+
+- validation has not passed yet
+- branch state is stale or already merged
+- `gh` auth is not ready
+- PR body was malformed and needs correction through `gh pr edit --body-file`
+
+## Validation
+
+- Contract: confirm the skill matches the documented branch, PR, and body-file workflow.
+- Probe: the skill should be able to determine whether publication is blocked before mutating repo state.

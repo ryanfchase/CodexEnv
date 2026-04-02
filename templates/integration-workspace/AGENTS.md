@@ -40,7 +40,9 @@ Instructions in this template apply to a parent workspace that coordinates sibli
   - the artifact-consumption contract for publishable services
 - Seed those inventories from `research/command-catalog.md`, then specialize them for each child repo and the workspace-level checks.
 - Keep `skill-inventory.md` aligned with the shared foundation skills plus any workspace or child-repo skills derived from stable command inventory entries.
+- Treat `skill-inventory.md` as the authoritative skill registry for the workspace skill surface.
 - Validate every workspace-local or child-repo-local skill statically, and add smoke validation only when the skill starts services, runs Docker, opens shells, or depends on process readiness.
+- Validate shared skills by contract, and add probe validation only when the shared skill inspects live repo or auth state.
 - Update `codex-template.json` whenever the workspace is brought forward to a newer template version, when its codexification stage changes, when readiness evidence changes materially, or when local overrides change materially.
 - Update `codex-assessment.md` whenever the readiness scorecard, latest evidence, or next promotion target changes.
 - Treat container publishing as an opt-in capability for the child repos that actually build or ship images, not as a workspace-wide default.

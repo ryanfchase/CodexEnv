@@ -21,7 +21,9 @@ This template is derived from the single-repo workflow. Add only the cross-repo 
 - `verification-first.md` records how to validate contracts across repos.
 - `command-inventory.md` lists the repeatable commands for each child repo.
 - `skill-inventory.md` maps shared foundation skills plus workspace and child-repo skill layers.
+- `skill-inventory.md` should act as the authoritative workspace skill registry.
 - workspace and child-repo skills should declare a `validation_level`; require `static` for all and reserve `smoke` for runtime-sensitive flows.
+- first-class skills should also declare support status, inputs, outputs, and failure modes so they can be reused across repos without reinterpreting the docs.
 - The child repo inventories should be seeded from the shared command catalog.
 
 ## Standard Workflow

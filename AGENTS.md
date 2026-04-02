@@ -35,3 +35,4 @@ Instructions in this workspace apply to the CodexEnv template repository.
 - When a meaningful milestone is reached, add or update a local session summary in `.codex-sessions/`.
 - Version `single-repo` and `integration-workspace` separately using semantic versions.
 - Shared foundation skills belong under `skills/shared/`; repo-local skills should be derived from command inventories rather than invented ad hoc.
+- Treat `skill-inventory.md` as the authoritative skill registry for template, repo, or environment scope.
