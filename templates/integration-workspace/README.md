@@ -17,6 +17,7 @@ This template is derived from the single-repo workflow. Add only the cross-repo 
   - which apps are long-running services versus static frontends
   - the default cloud runtime target for each class
   - the deploy registry strategy for containerized workloads
+  - whether the current environment stops at artifact-consumption contracts or also owns full deployment implementation
 - `verification-first.md` records how to validate contracts across repos.
 - `command-inventory.md` lists the repeatable commands for each child repo.
 - `skill-inventory.md` maps shared foundation skills plus workspace and child-repo skill layers.

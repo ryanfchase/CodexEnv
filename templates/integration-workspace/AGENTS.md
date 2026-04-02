@@ -26,6 +26,7 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 - If the same change needs coordination across repos, keep the contract boundary explicit and validate each repo independently.
 - Default AWS-managed long-running services to `aws-ecs-fargate` with `aws-ecr` as the deploy registry unless a repo documents a different runtime class.
 - Do not force static frontends into container publication when static hosting is the cleaner real runtime.
+- Treat artifact-consumption contracts and checked-in local orchestration as the default stopping point for an environment repo unless the environment explicitly chooses to own full deployment implementation.
 
 ## Verification
 
@@ -36,6 +37,7 @@ Instructions in this template apply to a parent workspace that coordinates sibli
   - the local orchestration entrypoints
   - the cloud runtime target by service class
   - the registry strategy for deployable container workloads
+  - the artifact-consumption contract for publishable services
 - Seed those inventories from `research/command-catalog.md`, then specialize them for each child repo and the workspace-level checks.
 - Keep `skill-inventory.md` aligned with the shared foundation skills plus any workspace or child-repo skills derived from stable command inventory entries.
 - Validate every workspace-local or child-repo-local skill statically, and add smoke validation only when the skill starts services, runs Docker, opens shells, or depends on process readiness.
@@ -43,6 +45,7 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 - Update `codex-assessment.md` whenever the readiness scorecard, latest evidence, or next promotion target changes.
 - Treat container publishing as an opt-in capability for the child repos that actually build or ship images, not as a workspace-wide default.
 - When a child repo publishes images, keep the container build or push path aligned with its documented verification path and the owning GitHub Actions workflow.
+- Full deployment implementation in the environment repo is optional. Document the phase boundary explicitly if the repo currently stops at registry, config, secret, and consumption contracts.
 
 ## Publish
 
