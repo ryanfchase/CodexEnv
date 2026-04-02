@@ -11,7 +11,7 @@ Skill metadata:
 - `scope`: `shared`
 - `template_types`: `single-repo`, `integration-workspace`
 - `introduced_in`: `1.1.0`
-- `changed_in`: `1.1.0`
+- `changed_in`: `1.6.1`
 - `depends_on`: `runtime-bootstrap.md`
 
 ## Workflow
@@ -19,7 +19,8 @@ Skill metadata:
 1. Prefer `gh auth status` to verify readiness.
 2. If auth is missing or invalid, direct the environment toward `gh auth login`.
 3. Treat `gh` as the preferred interface for PR creation and PR status workflows.
-4. Do not assume auth is valid just because git remotes exist.
+4. When a workflow needs to create or update PR descriptions, prefer `--body-file` over inline shell body arguments.
+5. Do not assume auth is valid just because git remotes exist.
 
 ## Output
 
