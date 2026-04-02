@@ -12,6 +12,11 @@ This template is derived from the single-repo workflow. Add only the cross-repo 
 - `codex-template.json` identifies the template line, version, codexification stage, conformity state, and drift state.
 - `codex-assessment.md` records the current readiness scorecard, evidence, and next promotion target.
 - `runtime-bootstrap.md` records workspace runtime, auth, and escalation conventions.
+- Integration environments should also document:
+  - where checked-in local orchestration lives
+  - which apps are long-running services versus static frontends
+  - the default cloud runtime target for each class
+  - the deploy registry strategy for containerized workloads
 - `verification-first.md` records how to validate contracts across repos.
 - `command-inventory.md` lists the repeatable commands for each child repo.
 - `skill-inventory.md` maps shared foundation skills plus workspace and child-repo skill layers.
@@ -26,3 +31,9 @@ This template is derived from the single-repo workflow. Add only the cross-repo 
 4. Start from the latest `origin/main` in each touched repo.
 5. Validate each touched repo with its own commands.
 6. Commit, push, and open PRs only after the cross-repo checks pass.
+
+## Default Runtime Model
+
+- Long-running backend services: `aws-ecs-fargate` + `aws-ecr`
+- Static frontend apps: `static-hosting` with no required container registry
+- Lambda container workloads: allowed as repo-specific exceptions, still publishing to `aws-ecr`

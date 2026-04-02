@@ -42,7 +42,7 @@ Use separate semantic version lines for the two template types:
 Current starting versions:
 
 - `single-repo@1.6.0`
-- `integration-workspace@1.6.0`
+- `integration-workspace@1.7.0`
 
 ## Codexification Stages
 
@@ -102,6 +102,8 @@ Recommended fields:
 - `template_access_reference`
 - `runtime_contract_version`
 - `shared_skill_set_version`
+- `cloud_runtime_target`
+- `registry_strategy`
 - `next_stage_target`
 - `operational_readiness`
 - `assessment_checks`

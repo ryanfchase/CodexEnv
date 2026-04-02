@@ -78,6 +78,8 @@ The manifest should also record `template_access_reference` so an agent knows wh
    - what is missing
    - what is stale
    - what is intentionally overridden
+   - where checked-in integration orchestration lives when the environment spans multiple repos
+   - which runtime class each major repo belongs to when cloud deployment is in scope
    - which optional capabilities are in scope for this repo or workspace
    - what evidence supports the current stage
 6. Update the manifest after review.
