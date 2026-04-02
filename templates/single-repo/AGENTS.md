@@ -34,7 +34,9 @@ Instructions in this template apply to a single git repository.
 - Seed that inventory from `research/command-catalog.md`, then replace placeholders with the repo's actual commands.
 - Keep `skill-inventory.md` aligned with the shared foundation skills plus any repo-local skills derived from stable command inventory entries.
 - Keep `.codex/skills/` aligned with `skill-inventory.md`; repo-local skills should be thin wrappers around documented repo commands.
+- Treat `skill-inventory.md` as the repo's authoritative skill registry, including support status and validation level for each listed skill.
 - Validate every repo-local skill statically, and add smoke validation only when the skill starts services, runs Docker, or opens shells.
+- Validate shared skills by contract, and add probe validation only when the shared skill inspects live repo or auth state.
 - Update `codex-template.json` whenever the repo is brought forward to a newer template version, when its codexification stage changes, when readiness evidence changes materially, or when local overrides change materially.
 - Update `codex-assessment.md` whenever the readiness scorecard, latest evidence, or next promotion target changes.
 - If the repo publishes container images, document that as an explicit optional capability rather than assuming it is part of the base codexification contract.

@@ -16,8 +16,8 @@ This directory is a staging area for reusable agent-assisted project templates a
 - `research/template-versioning.md` defines the manifest, version, drift, and upgrade model.
 - `research/runtime-bootstrap.md` defines shared environment, auth, and escalation conventions.
 - `research/cloud-runtime-topology.md` defines the default cloud-runtime and registry model for integration environments.
-- `research/skill-model.md` defines shared-vs-local skill boundaries and metadata.
-- `research/skill-validation.md` defines the static-versus-smoke validation standard for repo-local skills.
+- `research/skill-model.md` defines the first-class skill contract, shared-vs-local boundaries, and registry rules.
+- `research/skill-validation.md` defines shared contract/probe validation and repo-local static/smoke validation.
 - `research/codexification-assessment.md` defines lifecycle stages, conformity review, and template access modes.
 - `research/operational-readiness.md` defines the scorecard and evidence needed to promote a codexified environment from standardized to operational.
 - `research/container-publish-capability.md` defines the optional container-image build and publish capability for repos that actually ship images.
@@ -39,7 +39,7 @@ The intended sequence is:
 1. Reuse the single-repo template for a new repo.
 2. Add a local `codex-template.json` manifest so the environment advertises its template type, version, stage, conformity, drift, and readiness state.
 3. Apply the shared runtime/bootstrap conventions and shared skill foundation.
-4. Copy the relevant commands from the catalog into that repo's command inventory and derive repo-local skills from it.
+4. Copy the relevant commands from the catalog into that repo's command inventory and derive first-class repo-local skills from it.
 5. Add optional capabilities such as container publishing only when the repo's real workflow needs them.
 6. Derive an integration-workspace template only when the work truly spans sibling repos.
 
