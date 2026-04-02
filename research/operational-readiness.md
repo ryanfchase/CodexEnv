@@ -23,6 +23,7 @@ Use `assessment_checks` in the manifest as the built-in feedback loop.
 
 Recommended checks:
 
+- `readme_status_surface`
 - `manifest_current`
 - `docs_current`
 - `command_inventory_grounded`
@@ -47,6 +48,7 @@ Recommended values:
 
 The environment may be `standardized` when:
 
+- the README status surface exists
 - the manifest is current
 - the repo docs match reality
 - the command inventory is grounded in real commands
@@ -56,6 +58,7 @@ The environment may be `standardized` when:
 
 The environment may be promoted to `operational` when:
 
+- `readme_status_surface`: `pass`
 - `manifest_current`: `pass`
 - `docs_current`: `pass`
 - `command_inventory_grounded`: `pass`
@@ -83,6 +86,16 @@ Use `codex-template.json` for the machine-readable summary:
 - `operational_readiness`
 - `assessment_checks`
 
+Use the repo `README.md` for the thin human-facing dashboard:
+
+- current codexification stage
+- current readiness state
+- visual stage path
+- remaining work for the next promotion
+- currently available toolkit surface
+
 ## Practical Rule
 
 If an agent or human cannot tell whether the repo's documented verification path actually ran recently, the environment is not operational yet.
+
+If an agent or human cannot scan the `README.md` and quickly understand the current stage, remaining work, and available toolkit, the environment is missing an important feedback surface.
