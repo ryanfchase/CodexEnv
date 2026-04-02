@@ -1,13 +1,13 @@
 {
   "template_type": "single-repo",
-  "template_version": "1.6.0",
+  "template_version": "1.6.1",
   "codexification_stage": "standardized",
   "conformity_status": "conforming",
   "template_source": "CodexEnv/templates/single-repo",
   "template_access_mode": "local-checkout",
   "template_access_reference": "/path/to/CodexEnv",
   "runtime_contract_version": "1.0.0",
-  "shared_skill_set_version": "1.0.0",
+  "shared_skill_set_version": "1.0.1",
   "next_stage_target": "operational",
   "operational_readiness": "partial",
   "assessment_checks": {

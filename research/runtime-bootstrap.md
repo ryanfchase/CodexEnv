@@ -43,6 +43,9 @@ Notes:
   - PR creation
   - PR updates
   - PR status checks
+- When creating or editing PR descriptions with `gh`, prefer `--body-file` over inline shell body strings.
+- Do not embed Markdown backticks inside inline shell `gh pr create --body "..."` or `gh pr edit --body "..."` commands.
+- Use a quoted heredoc or temporary file for PR bodies so shell command substitution cannot inject command output into the description.
 - Use the GitHub connector primarily for read workflows such as:
   - PR inspection
   - issue lookup
