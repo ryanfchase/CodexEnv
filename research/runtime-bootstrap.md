@@ -39,10 +39,16 @@ Notes:
 
 - Standard interactive bootstrap: `gh auth login`
 - Standard validation check: `gh auth status`
-- Prefer `gh` for:
+- Prefer `gh` as the default GitHub write path for:
   - PR creation
+  - PR updates
   - PR status checks
-  - issue and review workflows
+- Use the GitHub connector primarily for read workflows such as:
+  - PR inspection
+  - issue lookup
+  - comment and review reads
+- Open ready-for-review PRs by default.
+- Open draft PRs only when the user explicitly asks for a draft or the repo documents a draft-first publish rule.
 - If `gh auth status` fails, fix auth before attempting PR or review operations.
 
 ## Escalation Expectations
