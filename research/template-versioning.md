@@ -41,7 +41,7 @@ Use separate semantic version lines for the two template types:
 
 Current starting versions:
 
-- `single-repo@1.5.0`
+- `single-repo@1.6.0`
 - `integration-workspace@1.7.0`
 
 ## Codexification Stages
@@ -125,5 +125,6 @@ Optional fields for repos or workspaces that explicitly support container-image 
 - `CodexEnv` should be maintained as the canonical upstream git repository for template releases and tags.
 - Each codexified repo or workspace keeps its own local manifest with stage, conformity, and source-access data.
 - The manifest should also provide a compact readiness summary so humans and agents can see how codexified the environment actually is without opening multiple docs.
+- Optional capabilities such as container publishing should be declared explicitly in the local manifest rather than assumed from repo type alone.
 - Prefer a local CodexEnv checkout when one is available; otherwise use the GitHub repo as the fallback template source.
 - Session summaries are the human-readable change log, not the machine-readable version identifier.

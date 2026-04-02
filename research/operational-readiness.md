@@ -38,6 +38,7 @@ Recommended checks:
 - `repo_local_skill_coverage`
 - `publish_flow_current`
 - `operational_smoke`
+- `container_publish_verification` for repos that opt into container-image publishing
 
 Recommended values:
 
@@ -79,6 +80,15 @@ The environment may be promoted to `operational` when:
 `github_actions_verification` may be `deferred` only when the repo is not expected to use GitHub Actions or when there is a documented alternative CI system that enforces the same verification path.
 
 `integration_orchestration_defined`, `integration_orchestration_validated`, `cloud_runtime_defined`, and `registry_strategy_defined` are most useful for integration-workspace templates or versioned environment repos. They may be omitted or `deferred` in ordinary single-repo app repos.
+`container_publish_verification` is optional. It should be present only when a repo explicitly declares a container-image build or publish capability.
+
+When present, use:
+
+- `missing`: the repo claims container publishing support but does not yet document a usable path
+- `deferred`: container publishing is planned but not yet standardized
+- `partial`: the build or push path is documented locally, but not yet enforced in CI
+- `pass`: a documented GitHub Actions workflow owns the intended image build or push path
+- `blocked`: the repo intends to publish images, but auth, registry, or workflow blockers prevent the path from being usable
 
 ## Evidence Recording
 

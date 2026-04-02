@@ -80,6 +80,7 @@ The manifest should also record `template_access_reference` so an agent knows wh
    - what is intentionally overridden
    - where checked-in integration orchestration lives when the environment spans multiple repos
    - which runtime class each major repo belongs to when cloud deployment is in scope
+   - which optional capabilities are in scope for this repo or workspace
    - what evidence supports the current stage
 6. Update the manifest after review.
 
@@ -96,6 +97,8 @@ The manifest should also record `template_access_reference` so an agent knows wh
 Treat `standardized` as a documentation and alignment milestone.
 
 Treat `operational` as an evidence milestone. The environment should not be promoted until there is a recorded readiness scorecard and at least one successful validation pass for the intended normal workflow.
+
+Optional capabilities such as container-image publishing should be assessed separately from base codexification. A repo may be fully codexified without any container capability if its real workflow does not build or ship images.
 
 ## Practical Rule
 

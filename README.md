@@ -20,6 +20,7 @@ This directory is a staging area for reusable agent-assisted project templates a
 - `research/skill-validation.md` defines the static-versus-smoke validation standard for repo-local skills.
 - `research/codexification-assessment.md` defines lifecycle stages, conformity review, and template access modes.
 - `research/operational-readiness.md` defines the scorecard and evidence needed to promote a codexified environment from standardized to operational.
+- `research/container-publish-capability.md` defines the optional container-image build and publish capability for repos that actually ship images.
 - `skills/shared/` contains the first shared skill set for codexified environments.
 - `templates/single-repo/` standardizes the workflow for one repo owned end-to-end.
 - `templates/integration-workspace/` standardizes the workflow for a parent workspace that coordinates sibling repos.
@@ -36,6 +37,7 @@ The intended sequence is:
 2. Add a local `codex-template.json` manifest so the environment advertises its template type, version, stage, conformity, drift, and readiness state.
 3. Apply the shared runtime/bootstrap conventions and shared skill foundation.
 4. Copy the relevant commands from the catalog into that repo's command inventory and derive repo-local skills from it.
-5. Derive an integration-workspace template only when the work truly spans sibling repos.
+5. Add optional capabilities such as container publishing only when the repo's real workflow needs them.
+6. Derive an integration-workspace template only when the work truly spans sibling repos.
 
 When possible, use a local `CodexEnv` checkout as the template source. If no local checkout exists, the GitHub repo is the supported fallback source for codexification and conformity work.

@@ -41,6 +41,8 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 - Validate every workspace-local or child-repo-local skill statically, and add smoke validation only when the skill starts services, runs Docker, opens shells, or depends on process readiness.
 - Update `codex-template.json` whenever the workspace is brought forward to a newer template version, when its codexification stage changes, when readiness evidence changes materially, or when local overrides change materially.
 - Update `codex-assessment.md` whenever the readiness scorecard, latest evidence, or next promotion target changes.
+- Treat container publishing as an opt-in capability for the child repos that actually build or ship images, not as a workspace-wide default.
+- When a child repo publishes images, keep the container build or push path aligned with its documented verification path and the owning GitHub Actions workflow.
 
 ## Publish
 
