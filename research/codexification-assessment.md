@@ -1,0 +1,90 @@
+# Codexification Assessment
+
+This file defines how to assess whether a project is codexified, how far along it is, and whether it still conforms to the current CodexEnv standard.
+
+## Goals
+
+- Let an agent classify a repo or workspace quickly from the root manifest.
+- Separate implementation progress from drift and intentional overrides.
+- Make codexification upgrades repeatable across machines.
+- Support both local CodexEnv checkouts and GitHub-based fallback access.
+
+## Assessment Axes
+
+Assess every codexified environment on three separate axes:
+
+- `codexification_stage`
+- `conformity_status`
+- `drift_status`
+
+Use `codexification_stage` to answer how far the environment has progressed.
+
+- `discovered`
+- `scaffolded`
+- `standardized`
+- `operational`
+- `maintained`
+
+Use `conformity_status` to answer how closely the environment matches the current CodexEnv standard.
+
+- `conforming`
+- `partial`
+- `nonconforming`
+
+Use `drift_status` to answer whether the environment is current or intentionally different.
+
+- `clean`
+- `overrides`
+- `stale`
+
+## Access Modes
+
+Record how the template source was accessed.
+
+- `local-checkout`: use the local CodexEnv checkout when present.
+- `remote-reference`: use the GitHub repo URL or release tag when no local checkout is available.
+
+The manifest should also record `template_access_reference` so an agent knows which local path or remote URL was used.
+
+## Assessment Workflow
+
+1. Read `codex-template.json` when present.
+2. Determine:
+   - template type
+   - template version
+   - codexification stage
+   - conformity status
+   - drift status
+   - template access mode
+3. Check for the expected Codex artifacts for that template line:
+   - `AGENTS.md`
+   - `codex-template.json`
+   - `runtime-bootstrap.md`
+   - `verification-first.md`
+   - `command-inventory.md`
+   - `skill-inventory.md`
+4. Compare those artifacts against the current CodexEnv template.
+5. Record:
+   - what is missing
+   - what is stale
+   - what is intentionally overridden
+6. Update the manifest after review.
+
+## Stage Guidance
+
+- `discovered`: no Codex artifacts yet.
+- `scaffolded`: artifacts exist, but they are not yet aligned, current, or committed as the repo standard.
+- `standardized`: the docs and manifest match the current template line and are grounded in real repo commands.
+- `operational`: the repo or workspace is standardized and has the intended skill coverage in place.
+- `maintained`: the environment is operational and kept current with template upgrades.
+
+## Practical Rule
+
+Do not treat a repo as fully codexified just because `AGENTS.md` exists.
+
+Treat it as current only when:
+
+- the manifest is present and current
+- the command inventory matches real commands
+- the runtime and verification docs match reality
+- the conformity review says the repo is usable against the current template line

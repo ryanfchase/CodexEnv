@@ -17,13 +17,14 @@ This directory is a staging area for reusable agent-assisted project templates.
 - `research/runtime-bootstrap.md` defines shared environment, auth, and escalation conventions.
 - `research/skill-model.md` defines shared-vs-local skill boundaries and metadata.
 - `research/skill-validation.md` defines the static-versus-smoke validation standard for repo-local skills.
+- `research/codexification-assessment.md` defines lifecycle stages, conformity review, and template access modes.
 - `skills/shared/` contains the first shared skill set for codexified environments.
 - `templates/single-repo/` standardizes the workflow for one repo owned end-to-end.
 - `templates/integration-workspace/` standardizes the workflow for a parent workspace that coordinates sibling repos.
 
 ## Intended Use
 
-Use these files as the starting point for future project work, then add repo-specific commands, ownership notes, and validation gates as each new workspace is introduced.
+Use these files as the starting point for future project work, then add repo-specific commands, ownership notes, validation gates, and codexification assessment data as each new workspace is introduced.
 
 `CodexEnv` is intended to be the canonical upstream git repository for this template system.
 
@@ -34,3 +35,5 @@ The intended sequence is:
 3. Apply the shared runtime/bootstrap conventions and shared skill foundation.
 4. Copy the relevant commands from the catalog into that repo's command inventory and derive repo-local skills from it.
 5. Derive an integration-workspace template only when the work truly spans sibling repos.
+
+When possible, use a local `CodexEnv` checkout as the template source. If no local checkout exists, the GitHub repo is the supported fallback source for codexification and conformity work.

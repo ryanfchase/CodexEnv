@@ -7,7 +7,7 @@ This template is derived from the single-repo workflow. Add only the cross-repo 
 ## Template Shape
 
 - `AGENTS.md` defines workspace routing and cross-repo behavior.
-- `codex-template.json` identifies the template line, version, and drift state.
+- `codex-template.json` identifies the template line, version, codexification stage, conformity state, and drift state.
 - `runtime-bootstrap.md` records workspace runtime, auth, and escalation conventions.
 - `verification-first.md` records how to validate contracts across repos.
 - `command-inventory.md` lists the repeatable commands for each child repo.
