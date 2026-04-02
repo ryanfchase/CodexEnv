@@ -14,12 +14,13 @@ Instructions in this workspace apply to the CodexEnv template repository.
 
 - Default to the single-repo template unless the task clearly involves sibling repositories.
 - Identify whether the task belongs to the single-repo template or the integration-workspace template.
-- Read the local `codex-template.json` manifest when present to determine template type, version, and drift state.
+- Read the local `codex-template.json` manifest when present to determine template type, version, codexification stage, conformity, and drift state.
 - Check the most recent session summary in `.codex-sessions/` before making assumptions about current standardization state.
 - Read the research notes in `research/verification-first-patterns.md` before making assumptions about workflow shape.
 - Read `research/runtime-bootstrap.md` before standardizing environment or auth behavior.
 - Read `research/skill-model.md` before adding or changing skills.
 - Read `research/skill-validation.md` before adding or changing repo-local skill validation.
+- Read `research/codexification-assessment.md` before changing how projects are assessed or upgraded.
 - Read `research/template-versioning.md` before changing the versioning model.
 - If you are extending a template, update the matching template `AGENTS.md` first, then the supporting docs.
 

@@ -7,7 +7,7 @@ This is the source template. Derive integration-workspace behavior from it only 
 ## Template Shape
 
 - `AGENTS.md` sets the operating rules.
-- `codex-template.json` identifies the template line, version, and drift state.
+- `codex-template.json` identifies the template line, version, codexification stage, conformity state, and drift state.
 - `runtime-bootstrap.md` records the repo's runtime, auth, and escalation conventions.
 - `verification-first.md` records the local validation ladder.
 - `command-inventory.md` lists the repeatable commands that may later become skills.

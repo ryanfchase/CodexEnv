@@ -5,7 +5,7 @@ Instructions in this template apply to a single git repository.
 ## Workflow
 
 - Treat this template as the canonical starting point for new repo work.
-- Add a root-level `codex-template.json` so the repo advertises its template version and drift status.
+- Add a root-level `codex-template.json` so the repo advertises its template version, codexification stage, conformity status, and drift status.
 - Add a repo-local `runtime-bootstrap.md` so shared skills can discover runtime and auth assumptions consistently.
 - Add repo-local skills under `.codex/skills/` once the command inventory is stable.
 - Inspect the relevant code paths before editing. Prefer `rg` for search.
@@ -33,7 +33,7 @@ Instructions in this template apply to a single git repository.
 - Keep `skill-inventory.md` aligned with the shared foundation skills plus any repo-local skills derived from stable command inventory entries.
 - Keep `.codex/skills/` aligned with `skill-inventory.md`; repo-local skills should be thin wrappers around documented repo commands.
 - Validate every repo-local skill statically, and add smoke validation only when the skill starts services, runs Docker, or opens shells.
-- Update `codex-template.json` whenever the repo is brought forward to a newer template version or when local overrides change materially.
+- Update `codex-template.json` whenever the repo is brought forward to a newer template version, when its codexification stage changes, or when local overrides change materially.
 
 ## Publish
 

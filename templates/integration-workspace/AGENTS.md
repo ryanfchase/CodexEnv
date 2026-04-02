@@ -5,7 +5,7 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 ## Workspace
 
 - Start from the single-repo template rules, then add only the sibling-repo coordination that the task requires.
-- Add a root-level `codex-template.json` so the workspace advertises its template version and drift status.
+- Add a root-level `codex-template.json` so the workspace advertises its template version, codexification stage, conformity status, and drift status.
 - Add a workspace-level `runtime-bootstrap.md` so shared skills can discover runtime and auth assumptions consistently.
 - This workspace is a router, not a single source tree.
 - Identify the child repository that owns the requested work before editing anything.
@@ -31,7 +31,7 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 - Seed those inventories from `research/command-catalog.md`, then specialize them for each child repo and the workspace-level checks.
 - Keep `skill-inventory.md` aligned with the shared foundation skills plus any workspace or child-repo skills derived from stable command inventory entries.
 - Validate every workspace-local or child-repo-local skill statically, and add smoke validation only when the skill starts services, runs Docker, opens shells, or depends on process readiness.
-- Update `codex-template.json` whenever the workspace is brought forward to a newer template version or when local overrides change materially.
+- Update `codex-template.json` whenever the workspace is brought forward to a newer template version, when its codexification stage changes, or when local overrides change materially.
 
 ## Publish
 
