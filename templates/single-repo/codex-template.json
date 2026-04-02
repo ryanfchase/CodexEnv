@@ -1,6 +1,6 @@
 {
   "template_type": "single-repo",
-  "template_version": "1.5.0",
+  "template_version": "1.6.0",
   "codexification_stage": "standardized",
   "conformity_status": "conforming",
   "template_source": "CodexEnv/templates/single-repo",
