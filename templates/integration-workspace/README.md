@@ -7,7 +7,7 @@ This template is derived from the single-repo workflow. Add only the cross-repo 
 ## Template Shape
 
 - `AGENTS.md` defines workspace routing and cross-repo behavior.
-- `README.md` should include a `Codex Status` section that summarizes current stage, readiness, remaining work, and available toolkit entries.
+- `README.md` should include a compact `Codex Status` card that summarizes current stage, readiness, remaining work, and available toolkit entries.
 - `readme-codex-status.md` provides the standard shape for that README dashboard section.
 - `codex-template.json` identifies the template line, version, codexification stage, conformity state, and drift state.
 - `codex-assessment.md` records the current readiness scorecard, evidence, and next promotion target.

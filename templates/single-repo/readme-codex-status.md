@@ -1,6 +1,6 @@
 # README Codex Status
 
-Add a `Codex Status` section to the repo `README.md`.
+Add a compact `Codex Status` section to the repo `README.md`.
 
 Recommended contents:
 
@@ -10,29 +10,23 @@ Recommended contents:
    - `next_stage_target`
    - `template_version`
 
-2. A visual stage path
-   - use Mermaid or compact ASCII
+2. A compact ASCII stage path
    - highlight the current stage
    - make the next stage obvious
 
-3. A checklist or scorecard excerpt
-   - show the most important `assessment_checks`
-   - keep it short enough to scan quickly
-
-4. Remaining work
+3. Remaining work
    - copy the current promotion gate from `codex-assessment.md`
    - keep it phrased as concrete next actions
 
-5. Toolkit available now
+4. Toolkit available now
    - shared foundation skills
    - repo-local skills if present
    - native verification commands
 
-Recommended Mermaid shape:
+Recommended ASCII shape:
 
-```mermaid
-flowchart LR
-  A[Discovered] --> B[Scaffolded] --> C[Standardized] --> D[Operational] --> E[Maintained]
+```text
+discovered > scaffolded > standardized > [operational] > maintained
 ```
 
 Practical rule:
@@ -40,3 +34,4 @@ Practical rule:
 - `README.md` should be the thin dashboard
 - `codex-template.json` should be the machine-readable summary
 - `codex-assessment.md` should be the detailed evidence log
+- avoid full score tables in the README when they can live in `codex-assessment.md`
