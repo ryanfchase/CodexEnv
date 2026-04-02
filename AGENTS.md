@@ -18,6 +18,7 @@ Instructions in this workspace apply to the CodexEnv template repository.
 - Check the most recent session summary in `.codex-sessions/` before making assumptions about current standardization state.
 - Read the research notes in `research/verification-first-patterns.md` before making assumptions about workflow shape.
 - Read `research/runtime-bootstrap.md` before standardizing environment or auth behavior.
+- Read `research/cloud-runtime-topology.md` before standardizing integration-environment runtime targets, registry choices, or local-versus-cloud ownership.
 - Read `research/skill-model.md` before adding or changing skills.
 - Read `research/skill-validation.md` before adding or changing repo-local skill validation.
 - Read `research/codexification-assessment.md` before changing how projects are assessed or upgraded.

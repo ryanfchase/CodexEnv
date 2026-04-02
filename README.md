@@ -15,6 +15,7 @@ This directory is a staging area for reusable agent-assisted project templates a
 - `research/command-catalog.md` seeds the repeatable command inventory.
 - `research/template-versioning.md` defines the manifest, version, drift, and upgrade model.
 - `research/runtime-bootstrap.md` defines shared environment, auth, and escalation conventions.
+- `research/cloud-runtime-topology.md` defines the default cloud-runtime and registry model for integration environments.
 - `research/skill-model.md` defines shared-vs-local skill boundaries and metadata.
 - `research/skill-validation.md` defines the static-versus-smoke validation standard for repo-local skills.
 - `research/codexification-assessment.md` defines lifecycle stages, conformity review, and template access modes.
