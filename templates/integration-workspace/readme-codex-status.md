@@ -1,6 +1,6 @@
 # README Codex Status
 
-Add a `Codex Status` section to the workspace `README.md`.
+Add a compact `Codex Status` section to the workspace `README.md`.
 
 Recommended contents:
 
@@ -10,20 +10,26 @@ Recommended contents:
    - `next_stage_target`
    - `template_version`
 
-2. A visual stage path
-   - use Mermaid or compact ASCII
+2. A compact ASCII stage path
    - highlight the current stage
    - make the next stage obvious
 
-3. A checklist or scorecard excerpt
-   - show the most important `assessment_checks`
-   - keep it short enough to scan quickly
-
-4. Remaining work
+3. Remaining work
    - copy the current promotion gate from `codex-assessment.md`
    - keep it phrased as concrete next actions
 
-5. Toolkit available now
+4. Toolkit available now
    - shared foundation skills
    - workspace skills if present
    - child-repo verification or orchestration entrypoints
+
+Recommended ASCII shape:
+
+```text
+discovered > scaffolded > standardized > [operational] > maintained
+```
+
+Practical rule:
+
+- keep the workspace README status surface lightweight
+- leave full scorecards and evidence in `codex-assessment.md`

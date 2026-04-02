@@ -90,7 +90,7 @@ Use the repo `README.md` for the thin human-facing dashboard:
 
 - current codexification stage
 - current readiness state
-- visual stage path
+- compact visual stage path
 - remaining work for the next promotion
 - currently available toolkit surface
 
@@ -99,3 +99,5 @@ Use the repo `README.md` for the thin human-facing dashboard:
 If an agent or human cannot tell whether the repo's documented verification path actually ran recently, the environment is not operational yet.
 
 If an agent or human cannot scan the `README.md` and quickly understand the current stage, remaining work, and available toolkit, the environment is missing an important feedback surface.
+
+If the `README.md` status surface starts to compete with the repo's main project description or setup docs, move detail back into `codex-assessment.md` and keep only the compact status card in the README.
