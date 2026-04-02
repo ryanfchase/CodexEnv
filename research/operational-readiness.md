@@ -1,0 +1,88 @@
+# Operational Readiness
+
+This file defines how to tell whether a codexified repo or workspace is merely documented, or actually ready to function as an agent toolkit.
+
+## Goals
+
+- Make it easy for humans and agents to answer "how codexified is this?"
+- Promote environments to `operational` only when there is real evidence, not just completed paperwork.
+- Keep the feedback signal compact enough to live in the manifest, with optional narrative detail in `codex-assessment.md`.
+
+## Readiness States
+
+Use `operational_readiness` in the manifest to summarize current execution readiness.
+
+- `missing`: the environment does not yet have enough Codex structure to assess readiness meaningfully.
+- `partial`: the environment is codexified and partly validated, but still lacks evidence for operational use.
+- `passing`: the environment has enough evidence to be treated as operational for normal repo work.
+- `blocked`: the environment would otherwise be ready, but a known blocker prevents the expected workflow from running.
+
+## Assessment Checks
+
+Use `assessment_checks` in the manifest as the built-in feedback loop.
+
+Recommended checks:
+
+- `manifest_current`
+- `docs_current`
+- `command_inventory_grounded`
+- `verification_path_defined`
+- `verification_path_validated`
+- `shared_skill_coverage`
+- `repo_local_skill_coverage`
+- `publish_flow_current`
+- `operational_smoke`
+
+Recommended values:
+
+- `pass`
+- `partial`
+- `missing`
+- `deferred`
+- `blocked`
+
+## Promotion Guidance
+
+### Standardized
+
+The environment may be `standardized` when:
+
+- the manifest is current
+- the repo docs match reality
+- the command inventory is grounded in real commands
+- the publish flow is current
+
+### Operational
+
+The environment may be promoted to `operational` when:
+
+- `manifest_current`: `pass`
+- `docs_current`: `pass`
+- `command_inventory_grounded`: `pass`
+- `verification_path_defined`: `pass`
+- `verification_path_validated`: `pass`
+- `shared_skill_coverage`: `pass`
+- `publish_flow_current`: `pass`
+- `operational_smoke`: `pass` or a repo-specific equivalent is explicitly recorded
+
+`repo_local_skill_coverage` does not have to be `pass` for every repo type. It may be `deferred` when the current template line explicitly allows a repo to stay operational with shared skills plus documented commands.
+
+## Evidence Recording
+
+Use `codex-assessment.md` for the human-readable narrative:
+
+- current classification
+- why the current stage is justified
+- the latest validation evidence
+- blockers or warnings
+- the next promotion gate
+
+Use `codex-template.json` for the machine-readable summary:
+
+- `next_stage_target`
+- `operational_readiness`
+- `assessment_checks`
+
+## Practical Rule
+
+If an agent or human cannot tell whether the repo's documented verification path actually ran recently, the environment is not operational yet.
