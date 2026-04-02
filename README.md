@@ -16,6 +16,7 @@ This directory is a staging area for reusable agent-assisted project templates.
 - `research/template-versioning.md` defines the manifest, version, drift, and upgrade model.
 - `research/runtime-bootstrap.md` defines shared environment, auth, and escalation conventions.
 - `research/skill-model.md` defines shared-vs-local skill boundaries and metadata.
+- `research/skill-validation.md` defines the static-versus-smoke validation standard for repo-local skills.
 - `skills/shared/` contains the first shared skill set for codexified environments.
 - `templates/single-repo/` standardizes the workflow for one repo owned end-to-end.
 - `templates/integration-workspace/` standardizes the workflow for a parent workspace that coordinates sibling repos.

@@ -30,6 +30,7 @@ Instructions in this template apply to a parent workspace that coordinates sibli
 - Keep a command inventory for each child repo so the workflow remains repeatable.
 - Seed those inventories from `research/command-catalog.md`, then specialize them for each child repo and the workspace-level checks.
 - Keep `skill-inventory.md` aligned with the shared foundation skills plus any workspace or child-repo skills derived from stable command inventory entries.
+- Validate every workspace-local or child-repo-local skill statically, and add smoke validation only when the skill starts services, runs Docker, opens shells, or depends on process readiness.
 - Update `codex-template.json` whenever the workspace is brought forward to a newer template version or when local overrides change materially.
 
 ## Publish
