@@ -1,6 +1,6 @@
 {
   "template_type": "single-repo",
-  "template_version": "1.4.1",
+  "template_version": "1.5.0",
   "codexification_stage": "standardized",
   "conformity_status": "conforming",
   "template_source": "CodexEnv/templates/single-repo",
@@ -17,6 +17,7 @@
     "command_inventory_grounded": "pass",
     "verification_path_defined": "pass",
     "verification_path_validated": "partial",
+    "github_actions_verification": "partial",
     "shared_skill_coverage": "pass",
     "repo_local_skill_coverage": "deferred",
     "publish_flow_current": "pass",

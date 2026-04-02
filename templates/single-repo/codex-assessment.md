@@ -14,6 +14,7 @@
 - `command_inventory_grounded`: `pass`
 - `verification_path_defined`: `pass`
 - `verification_path_validated`: `partial`
+- `github_actions_verification`: `partial`
 - `shared_skill_coverage`: `pass`
 - `repo_local_skill_coverage`: `deferred`
 - `publish_flow_current`: `pass`
